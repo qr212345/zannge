@@ -1,0 +1,226 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 10px;
+  background: #f5f7fa;
+  color: #333;
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+#modeControl {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#modeControl button {
+  margin: 0 10px;
+  padding: 8px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #3498db;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+#modeControl button:hover {
+  background-color: #2980b9;
+}
+
+#cameraSection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#reader, #rankingReader {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+#seatSection {
+  margin-bottom: 20px;
+}
+
+.seat-block {
+  background: white;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.seat-block h3 {
+  margin: 0 0 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: #34495e;
+}
+
+.remove-button {
+  font-weight: bold;
+  color: #e74c3c;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s;
+}
+
+.remove-button:hover {
+  color: #c0392b;
+}
+
+.player-entry {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-top: 1px solid #eee;
+  align-items: center;
+  font-size: 14px;
+}
+
+.title-badge {
+  font-weight: bold;
+  margin-left: 6px;
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-size: 13px;
+  user-select: none;
+}
+
+.title-👑 {
+  background: linear-gradient(45deg, #f0c419, #f7df72);
+  color: #5a4200;
+  position: relative;
+  animation: lightning 1.5s infinite;
+}
+
+@keyframes lightning {
+  0%, 100% { text-shadow: 0 0 5px #f0c419, 0 0 10px #f0c419; }
+  50% { text-shadow: 0 0 20px #fff, 0 0 30px #f0c419, 0 0 40px #f0c419; }
+}
+
+.title-🥈 {
+  background: linear-gradient(45deg, #e67e22, #f39c12);
+  color: white;
+  position: relative;
+  animation: fireGlow 2s infinite alternate;
+}
+
+@keyframes fireGlow {
+  from {
+    text-shadow: 0 0 6px #e67e22, 0 0 10px #f39c12;
+  }
+  to {
+    text-shadow: 0 0 18px #f39c12, 0 0 30px #e67e22;
+  }
+}
+
+.title-🥉 {
+  background: linear-gradient(45deg, #16a085, #1abc9c);
+  color: white;
+  animation: windGlow 3s infinite ease-in-out;
+}
+
+@keyframes windGlow {
+  0%, 100% {
+    text-shadow: 0 0 8px #1abc9c, 0 0 15px #16a085;
+  }
+  50% {
+    text-shadow: 0 0 20px #16a085, 0 0 30px #1abc9c;
+  }
+}
+
+.rate-change {
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.rate-up {
+  color: #27ae60;
+}
+
+.rate-down {
+  color: #c0392b;
+}
+
+.rate-zero {
+  color: #7f8c8d;
+}
+
+#rankingSection {
+  margin-bottom: 20px;
+}
+
+.ranking-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 300px;
+  margin: 0 auto 15px;
+}
+
+.ranking-list li {
+  background: white;
+  margin-bottom: 6px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: grab;
+  user-select: none;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.ranking-list li.dragging {
+  opacity: 0.6;
+  cursor: grabbing;
+}
+
+#controlSection {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#controlSection button {
+  margin: 5px 8px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  background-color: #34495e;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+#controlSection button:hover {
+  background-color: #2c3e50;
+}
+
+.message {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2c3e50cc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.message.show {
+  opacity: 1;
+}
